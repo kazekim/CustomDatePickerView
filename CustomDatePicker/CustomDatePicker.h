@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-typedef void (^CustomDatePickerChangeCallback)(NSDate*);
-
 @protocol CustomDatePickerDelegate;
 
 
@@ -21,8 +19,7 @@ typedef void (^CustomDatePickerChangeCallback)(NSDate*);
     NSDate *_maximumDate;
     NSDate *_minimumDate;
     NSTimeZone *_timeZone;
-    
-    CustomDatePickerChangeCallback _customDatePickerChangeCallback;
+
     
 }
 
@@ -34,11 +31,8 @@ typedef void (^CustomDatePickerChangeCallback)(NSDate*);
 
 @property(nonatomic,assign) id<CustomDatePickerDelegate> delegate;
 
-@property(nonatomic, copy) CustomDatePickerChangeCallback customDatePickerChangeCallback;
-
 -(id)initWithImageForDay:(UIImage*)dayImage andMonthImage:(UIImage*)monthImage andYearImage:(UIImage*)yearImage forRect:(CGRect)rect;
 
--(void)customDatePickerHasChangedCallBack:(CustomDatePickerChangeCallback)block;
 
 @end
 

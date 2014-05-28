@@ -252,10 +252,6 @@
     self.calendar = nil;
 }
 
--(void)customDatePickerHasChangedCallBack:(CustomDatePickerChangeCallback)block
-{
-    self.customDatePickerChangeCallback = block;
-}
 #pragma mark UICustomPickerConrol Delegate
 
 - (void)pickerControllerDidSpin:(CustomPickerView *)controller;
@@ -265,22 +261,17 @@
 
 - (void)pickerController:(CustomPickerView *)dial didSnapToString:(NSString *)string
 {
-    NSLog(@"index %d",dial.selectedIndex);
-    if (_customDatePickerChangeCallback)
-    {
-        NSDate *date = [[NSDate alloc] init];
-        
-        NSDateComponents *comps = [[NSDateComponents alloc] init];
-        [comps setDay:1+_dayPicker.selectedIndex];
-        [comps setMonth:1 + _mounthPicker.selectedIndex];
-        [comps setYear:_minYear + _yearPicker.selectedIndex];
-        date = [[NSCalendar currentCalendar] dateFromComponents:comps];
-        
-        if (self.customDatePickerChangeCallback)
-        {
-            self.customDatePickerChangeCallback(date);
-        }
-        
+//    NSLog(@"index %d",dial.selectedIndex);
+    NSDate *date = [[NSDate alloc] init];
+    
+    NSDateComponents *comps = [[NSDateComponents alloc] init];
+    [comps setDay:1+_dayPicker.selectedIndex];
+    [comps setMonth:1 + _mounthPicker.selectedIndex];
+    [comps setYear:_minYear + _yearPicker.selectedIndex];
+    date = [[NSCalendar currentCalendar] dateFromComponents:comps];
+
+    
+    if(self.delegate){
         [self.delegate datePickerDateChange:self forDate:date];
     }
 }
