@@ -180,7 +180,7 @@
     
     [_dayPicker retrieveCustomPickerViewControllerDidSpinCallback:^(int day)
     {
-        NSLog(@"Day %d",day);
+//        NSLog(@"Day %d",day);
     }];
     
     
@@ -201,7 +201,7 @@
     [_yearPicker retrieveCustomPickerViewControllerDidSpinCallback:^(int year)
     {
         _year = _minYear - 1 + year;
-        NSLog(@"Year %d",_year);
+//        NSLog(@"Year %d",_year);
     }];
     
     [_mounthPicker retrieveCustomPickerViewControllerDidSpinCallback:^(int month)
@@ -224,7 +224,7 @@
         }
         _dayPicker.data4Rows = days;
         
-        NSLog(@"Month %d",month);
+//        NSLog(@"Month %d",month);
         
     }];
     
