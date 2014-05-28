@@ -59,10 +59,7 @@ itemVerticalOffset:(CGFloat)offset andData:(NSArray*) data
         [overlayView setUserInteractionEnabled:NO];
         overlayView.center = CGPointMake(rect.size.width/2, rect.size.height/2);
         //[self addSubview:overlayView]; //image should be particially transparent
-        
-        UIImageView *backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"birthday_slotBg"]];
-        backgroundView.center = CGPointMake(rect.size.width/2, rect.size.height/2);
-        self.tableView.backgroundView = backgroundView;
+       
         [self addSubview:self.tableView]; //on base image
         [self addSubview:overlayView];
         
