@@ -46,6 +46,6 @@ typedef void (^CustomDatePickerChangeCallback)(NSDate*);
 
 @optional
 
--(void)datePickerDateChange:(CustomDatePicker*)piker forDate:(NSDate*) date;
+-(void)datePickerDateChange:(CustomDatePicker*)picker forDate:(NSDate*) date;
 
 @end

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0460"
+   LastUpgradeVersion = "0510"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "84AAB22817BB5EB100A3F547"
-               BuildableName = "CustomDatePicker.app"
-               BlueprintName = "CustomDatePicker"
-               ReferencedContainer = "container:CustomDatePicker.xcodeproj">
+               BlueprintIdentifier = "F0E516DC185C771C0079EA4B"
+               BuildableName = "CustomDatePickerViewArc.app"
+               BlueprintName = "CustomDatePickerViewArc"
+               ReferencedContainer = "container:CustomDatePickerViewArc.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -28,14 +28,24 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "F0E516F7185C771D0079EA4B"
+               BuildableName = "CustomDatePickerViewArcTests.xctest"
+               BlueprintName = "CustomDatePickerViewArcTests"
+               ReferencedContainer = "container:CustomDatePickerViewArc.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "84AAB22817BB5EB100A3F547"
-            BuildableName = "CustomDatePicker.app"
-            BlueprintName = "CustomDatePicker"
-            ReferencedContainer = "container:CustomDatePicker.xcodeproj">
+            BlueprintIdentifier = "F0E516DC185C771C0079EA4B"
+            BuildableName = "CustomDatePickerViewArc.app"
+            BlueprintName = "CustomDatePickerViewArc"
+            ReferencedContainer = "container:CustomDatePickerViewArc.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -51,10 +61,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "84AAB22817BB5EB100A3F547"
-            BuildableName = "CustomDatePicker.app"
-            BlueprintName = "CustomDatePicker"
-            ReferencedContainer = "container:CustomDatePicker.xcodeproj">
+            BlueprintIdentifier = "F0E516DC185C771C0079EA4B"
+            BuildableName = "CustomDatePickerViewArc.app"
+            BlueprintName = "CustomDatePickerViewArc"
+            ReferencedContainer = "container:CustomDatePickerViewArc.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -69,10 +79,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "84AAB22817BB5EB100A3F547"
-            BuildableName = "CustomDatePicker.app"
-            BlueprintName = "CustomDatePicker"
-            ReferencedContainer = "container:CustomDatePicker.xcodeproj">
+            BlueprintIdentifier = "F0E516DC185C771C0079EA4B"
+            BuildableName = "CustomDatePickerViewArc.app"
+            BlueprintName = "CustomDatePickerViewArc"
+            ReferencedContainer = "container:CustomDatePickerViewArc.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

@@ -5,34 +5,34 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>6BA7766E-FD3C-49B1-8910-74CEE99BA79A</string>
+	<string>9FB6D123-02AD-437B-B279-FEFBA32DAA90</string>
 	<key>IDESourceControlProjectName</key>
-	<string>CustomDatePicker</string>
+	<string>CustomDatePickerViewArc</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>4CF643FE-E999-4479-99D9-DECC486D7048</key>
-		<string>https://github.com/evgzor/CustomDatePickerView.git</string>
+		<key>D2D1F11D-56B7-44D6-A944-581CD7C7EB60</key>
+		<string>https://github.com/kazekim/CustomDatePickerView.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>CustomDatePicker.xcodeproj/project.xcworkspace</string>
+	<string>CustomDatePickerViewArc/CustomDatePickerViewArc.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>4CF643FE-E999-4479-99D9-DECC486D7048</key>
-		<string>../..</string>
+		<key>D2D1F11D-56B7-44D6-A944-581CD7C7EB60</key>
+		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/evgzor/CustomDatePickerView.git</string>
+	<string>https://github.com/kazekim/CustomDatePickerView.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>4CF643FE-E999-4479-99D9-DECC486D7048</string>
+	<string>D2D1F11D-56B7-44D6-A944-581CD7C7EB60</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>4CF643FE-E999-4479-99D9-DECC486D7048</string>
+			<string>D2D1F11D-56B7-44D6-A944-581CD7C7EB60</string>
 			<key>IDESourceControlWCCName</key>
 			<string>CustomDatePickerView</string>
 		</dict>

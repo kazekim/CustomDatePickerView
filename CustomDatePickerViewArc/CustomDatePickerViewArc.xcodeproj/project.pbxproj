@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DF7E429E193633DB006A97A4 /* CustomDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = DF7E429B193633DB006A97A4 /* CustomDatePicker.m */; };
+		DF7E429F193633DB006A97A4 /* CustomPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = DF7E429D193633DB006A97A4 /* CustomPickerView.m */; };
+		DF7E42A3193636D8006A97A4 /* day.png in Resources */ = {isa = PBXBuildFile; fileRef = DF7E42A0193636D8006A97A4 /* day.png */; };
+		DF7E42A4193636D8006A97A4 /* month.png in Resources */ = {isa = PBXBuildFile; fileRef = DF7E42A1193636D8006A97A4 /* month.png */; };
+		DF7E42A5193636D8006A97A4 /* year.png in Resources */ = {isa = PBXBuildFile; fileRef = DF7E42A2193636D8006A97A4 /* year.png */; };
 		F0E516E1185C771D0079EA4B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0E516E0185C771C0079EA4B /* Foundation.framework */; };
 		F0E516E3185C771D0079EA4B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0E516E2185C771D0079EA4B /* CoreGraphics.framework */; };
 		F0E516E5185C771D0079EA4B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0E516E4185C771D0079EA4B /* UIKit.framework */; };
@@ -19,8 +24,6 @@
 		F0E516FC185C771D0079EA4B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0E516E4185C771D0079EA4B /* UIKit.framework */; };
 		F0E51704185C771D0079EA4B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F0E51702185C771D0079EA4B /* InfoPlist.strings */; };
 		F0E51706185C771D0079EA4B /* CustomDatePickerViewArcTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E51705185C771D0079EA4B /* CustomDatePickerViewArcTests.m */; };
-		F0E517A6185C78EA0079EA4B /* CustomDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E517A3185C78EA0079EA4B /* CustomDatePicker.m */; };
-		F0E517A7185C78EA0079EA4B /* CustomPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E517A5185C78EA0079EA4B /* CustomPickerView.m */; };
 		F0E517AA185C791E0079EA4B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E517A9185C791E0079EA4B /* ViewController.m */; };
 		F0E517AF185C7A440079EA4B /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0E517AB185C7A440079EA4B /* ViewController_iPad.xib */; };
 		F0E517B0185C7A440079EA4B /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0E517AD185C7A440079EA4B /* ViewController_iPhone.xib */; };
@@ -28,9 +31,6 @@
 		F0E517B6185C871B0079EA4B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F0E517B2185C871B0079EA4B /* Default-568h@2x.png */; };
 		F0E517B7185C871B0079EA4B /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = F0E517B3185C871B0079EA4B /* Default.png */; };
 		F0E517B8185C871B0079EA4B /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F0E517B4185C871B0079EA4B /* Default@2x.png */; };
-		F0E517BD185C874D0079EA4B /* day.png in Resources */ = {isa = PBXBuildFile; fileRef = F0E517BA185C874D0079EA4B /* day.png */; };
-		F0E517BE185C874D0079EA4B /* month.png in Resources */ = {isa = PBXBuildFile; fileRef = F0E517BB185C874D0079EA4B /* month.png */; };
-		F0E517BF185C874D0079EA4B /* year.png in Resources */ = {isa = PBXBuildFile; fileRef = F0E517BC185C874D0079EA4B /* year.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +44,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DF7E429A193633DB006A97A4 /* CustomDatePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomDatePicker.h; sourceTree = "<group>"; };
+		DF7E429B193633DB006A97A4 /* CustomDatePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomDatePicker.m; sourceTree = "<group>"; };
+		DF7E429C193633DB006A97A4 /* CustomPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomPickerView.h; sourceTree = "<group>"; };
+		DF7E429D193633DB006A97A4 /* CustomPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomPickerView.m; sourceTree = "<group>"; };
+		DF7E42A0193636D8006A97A4 /* day.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = day.png; sourceTree = "<group>"; };
+		DF7E42A1193636D8006A97A4 /* month.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = month.png; sourceTree = "<group>"; };
+		DF7E42A2193636D8006A97A4 /* year.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = year.png; sourceTree = "<group>"; };
 		F0E516DD185C771C0079EA4B /* CustomDatePickerViewArc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomDatePickerViewArc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0E516E0185C771C0079EA4B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F0E516E2185C771D0079EA4B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -60,10 +67,6 @@
 		F0E51701185C771D0079EA4B /* CustomDatePickerViewArcTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CustomDatePickerViewArcTests-Info.plist"; sourceTree = "<group>"; };
 		F0E51703185C771D0079EA4B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F0E51705185C771D0079EA4B /* CustomDatePickerViewArcTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomDatePickerViewArcTests.m; sourceTree = "<group>"; };
-		F0E517A2185C78EA0079EA4B /* CustomDatePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomDatePicker.h; path = CustomDatePicker/CustomDatePicker.h; sourceTree = "<group>"; };
-		F0E517A3185C78EA0079EA4B /* CustomDatePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomDatePicker.m; path = CustomDatePicker/CustomDatePicker.m; sourceTree = "<group>"; };
-		F0E517A4185C78EA0079EA4B /* CustomPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomPickerView.h; path = CustomDatePicker/CustomPickerView.h; sourceTree = "<group>"; };
-		F0E517A5185C78EA0079EA4B /* CustomPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomPickerView.m; path = CustomDatePicker/CustomPickerView.m; sourceTree = "<group>"; };
 		F0E517A8185C791E0079EA4B /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		F0E517A9185C791E0079EA4B /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		F0E517AC185C7A440079EA4B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
@@ -72,9 +75,6 @@
 		F0E517B2185C871B0079EA4B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		F0E517B3185C871B0079EA4B /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		F0E517B4185C871B0079EA4B /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		F0E517BA185C874D0079EA4B /* day.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = day.png; path = images/day.png; sourceTree = "<group>"; };
-		F0E517BB185C874D0079EA4B /* month.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = month.png; path = images/month.png; sourceTree = "<group>"; };
-		F0E517BC185C874D0079EA4B /* year.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = year.png; path = images/year.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +101,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DF7E4299193633DB006A97A4 /* CustomDatePicker */ = {
+			isa = PBXGroup;
+			children = (
+				DF7E42A0193636D8006A97A4 /* day.png */,
+				DF7E42A1193636D8006A97A4 /* month.png */,
+				DF7E42A2193636D8006A97A4 /* year.png */,
+				DF7E429A193633DB006A97A4 /* CustomDatePicker.h */,
+				DF7E429B193633DB006A97A4 /* CustomDatePicker.m */,
+				DF7E429C193633DB006A97A4 /* CustomPickerView.h */,
+				DF7E429D193633DB006A97A4 /* CustomPickerView.m */,
+			);
+			name = CustomDatePicker;
+			path = ../../CustomDatePicker;
+			sourceTree = "<group>";
+		};
 		F0E516D4185C771C0079EA4B = {
 			isa = PBXGroup;
 			children = (
@@ -134,11 +149,11 @@
 		F0E516E6185C771D0079EA4B /* CustomDatePickerViewArc */ = {
 			isa = PBXGroup;
 			children = (
+				DF7E4299193633DB006A97A4 /* CustomDatePicker */,
 				F0E517AB185C7A440079EA4B /* ViewController_iPad.xib */,
 				F0E517AD185C7A440079EA4B /* ViewController_iPhone.xib */,
 				F0E517A8185C791E0079EA4B /* ViewController.h */,
 				F0E517A9185C791E0079EA4B /* ViewController.m */,
-				F0E5170F185C77970079EA4B /* CustomDatePickerViewArc */,
 				F0E516EF185C771D0079EA4B /* AppDelegate.h */,
 				F0E516F0185C771D0079EA4B /* AppDelegate.m */,
 				F0E516F2185C771D0079EA4B /* Images.xcassets */,
@@ -150,7 +165,6 @@
 		F0E516E7185C771D0079EA4B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				F0E517B9185C873C0079EA4B /* Images */,
 				F0E517B1185C871B0079EA4B /* CustomDatePicker-Info.plist */,
 				F0E517B2185C871B0079EA4B /* Default-568h@2x.png */,
 				F0E517B3185C871B0079EA4B /* Default.png */,
@@ -179,27 +193,6 @@
 				F0E51702185C771D0079EA4B /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		F0E5170F185C77970079EA4B /* CustomDatePickerViewArc */ = {
-			isa = PBXGroup;
-			children = (
-				F0E517A2185C78EA0079EA4B /* CustomDatePicker.h */,
-				F0E517A3185C78EA0079EA4B /* CustomDatePicker.m */,
-				F0E517A4185C78EA0079EA4B /* CustomPickerView.h */,
-				F0E517A5185C78EA0079EA4B /* CustomPickerView.m */,
-			);
-			name = CustomDatePickerViewArc;
-			sourceTree = "<group>";
-		};
-		F0E517B9185C873C0079EA4B /* Images */ = {
-			isa = PBXGroup;
-			children = (
-				F0E517BA185C874D0079EA4B /* day.png */,
-				F0E517BB185C874D0079EA4B /* month.png */,
-				F0E517BC185C874D0079EA4B /* year.png */,
-			);
-			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,12 +270,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F0E517BE185C874D0079EA4B /* month.png in Resources */,
-				F0E517BD185C874D0079EA4B /* day.png in Resources */,
+				DF7E42A5193636D8006A97A4 /* year.png in Resources */,
 				F0E517B8185C871B0079EA4B /* Default@2x.png in Resources */,
+				DF7E42A4193636D8006A97A4 /* month.png in Resources */,
 				F0E517AF185C7A440079EA4B /* ViewController_iPad.xib in Resources */,
 				F0E516EB185C771D0079EA4B /* InfoPlist.strings in Resources */,
-				F0E517BF185C874D0079EA4B /* year.png in Resources */,
+				DF7E42A3193636D8006A97A4 /* day.png in Resources */,
 				F0E516F3185C771D0079EA4B /* Images.xcassets in Resources */,
 				F0E517B0185C7A440079EA4B /* ViewController_iPhone.xib in Resources */,
 				F0E517B7185C871B0079EA4B /* Default.png in Resources */,
@@ -306,10 +299,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF7E429F193633DB006A97A4 /* CustomPickerView.m in Sources */,
+				DF7E429E193633DB006A97A4 /* CustomDatePicker.m in Sources */,
 				F0E516F1185C771D0079EA4B /* AppDelegate.m in Sources */,
-				F0E517A7185C78EA0079EA4B /* CustomPickerView.m in Sources */,
 				F0E516ED185C771D0079EA4B /* main.m in Sources */,
-				F0E517A6185C78EA0079EA4B /* CustomDatePicker.m in Sources */,
 				F0E517AA185C791E0079EA4B /* ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -529,6 +522,7 @@
 				F0E5170B185C771D0079EA4B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F0E5170C185C771D0079EA4B /* Build configuration list for PBXNativeTarget "CustomDatePickerViewArcTests" */ = {
 			isa = XCConfigurationList;
@@ -537,6 +531,7 @@
 				F0E5170E185C771D0079EA4B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -35,7 +35,7 @@ itemVerticalOffset:(CGFloat)offset andData:(NSArray*) data
     rect.size.height = backImage.size.height;
     self.data4Rows = data;
     
-    self = [[super initWithFrame:rect] autorelease];
+    self = [super initWithFrame:rect];
     
     if (self)
     {
@@ -43,7 +43,7 @@ itemVerticalOffset:(CGFloat)offset andData:(NSArray*) data
         self.isSpinning = NO;
         isAnimating = NO;
         
-        self.tableView = [[[UITableView alloc] initWithFrame:CGRectMake(3, 3, rect.size.width-TABLE_RECT_OFFSET, rect.size.height-TABLE_RECT_OFFSET) style:UITableViewStylePlain] autorelease];
+        self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(3, 3, rect.size.width-TABLE_RECT_OFFSET, rect.size.height-TABLE_RECT_OFFSET) style:UITableViewStylePlain];
         self.tableView.delegate = self;
         self.tableView.dataSource = self;
         self.tableView.rowHeight = ROW_HEIGHT;
@@ -54,12 +54,17 @@ itemVerticalOffset:(CGFloat)offset andData:(NSArray*) data
         
         //[self addSubview:self.tableView]; // behind base image
         
-        UIImageView *overlayView = [[[UIImageView alloc] initWithImage:backImage] autorelease];
+        UIImageView *overlayView = [[UIImageView alloc] initWithImage:backImage];
+        [overlayView setBackgroundColor:[UIColor clearColor]];
+        [overlayView setUserInteractionEnabled:NO];
         overlayView.center = CGPointMake(rect.size.width/2, rect.size.height/2);
         //[self addSubview:overlayView]; //image should be particially transparent
         
-        self.tableView.backgroundView = overlayView;// this depends how u would like add background vie
+        UIImageView *backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"birthday_slotBg"]];
+        backgroundView.center = CGPointMake(rect.size.width/2, rect.size.height/2);
+        self.tableView.backgroundView = backgroundView;
         [self addSubview:self.tableView]; //on base image
+        [self addSubview:overlayView];
         
         [self.tableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] animated:NO scrollPosition:UITableViewScrollPositionMiddle];
         [self snap];
@@ -73,7 +78,6 @@ itemVerticalOffset:(CGFloat)offset andData:(NSArray*) data
     self.tableView = nil;
     self.data4Rows = nil;
     self.strings = nil;
-    [super dealloc];
 }
 
 
@@ -89,7 +93,7 @@ itemVerticalOffset:(CGFloat)offset andData:(NSArray*) data
     UIView* headerView = nil;
     if (section == 0)
     {
-        headerView = [[[UIView alloc] initWithFrame:CGRectMake(0, 0, self.bounds.size.width, 20)] autorelease];
+        headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.bounds.size.width, 20)];
     }
     return headerView;
 }
@@ -99,7 +103,7 @@ itemVerticalOffset:(CGFloat)offset andData:(NSArray*) data
     UIView* headerView = nil;
     if (section == 0)
     {
-        headerView = [[[UIView alloc] initWithFrame:CGRectMake(0, 0, self.bounds.size.width, 19)] autorelease];
+        headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.bounds.size.width, 19)];
     }
     return headerView;
 }
@@ -134,7 +138,7 @@ itemVerticalOffset:(CGFloat)offset andData:(NSArray*) data
     
     if (cell == nil)
     {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellName] autorelease];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellName];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         cell.backgroundColor = [UIColor clearColor];
         cell.contentView.backgroundColor = [UIColor clearColor];
@@ -142,7 +146,7 @@ itemVerticalOffset:(CGFloat)offset andData:(NSArray*) data
         NSString* dataObjectStr = [NSString stringWithFormat:@"%@",[self.data4Rows objectAtIndex:indexPath.row] ];
         
         UIImage* image = [self addText:[self imageWithColor:[UIColor clearColor]forRect:CGRectMake(0, 0, 100, 30)] text: dataObjectStr];
-        UIImageView* numberImage = [[[UIImageView alloc] initWithFrame:CGRectMake(15, 0, 80, ROW_HEIGHT)] autorelease];
+        UIImageView* numberImage = [[UIImageView alloc] initWithFrame:CGRectMake(15, 0, 80, ROW_HEIGHT)];
         numberImage.contentMode = UIViewContentModeCenter;
         numberImage.image = image;
         [cell.contentView addSubview:numberImage];
@@ -156,8 +160,6 @@ itemVerticalOffset:(CGFloat)offset andData:(NSArray*) data
 {
     //if (data4Rows!=_data4Rows)
    // {
-        [data4Rows retain];
-        [_data4Rows release];
         _data4Rows = data4Rows;
         [self.tableView reloadData];
         [self snap];
@@ -280,7 +282,7 @@ itemVerticalOffset:(CGFloat)offset andData:(NSArray*) data
     UIGraphicsBeginImageContext(img.size);
     [img drawInRect:CGRectMake(0,0,img.size.width,img.size.height)];
     CGRect rect = CGRectMake(point.x, point.y, img.size.width, img.size.height);
-    [[UIColor whiteColor] set];
+    [[UIColor blackColor] set];
     [text drawInRect:CGRectIntegral(rect) withFont:font];
     UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();

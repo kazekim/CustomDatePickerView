@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>CustomDatePicker.xcscheme</key>
+		<key>CustomDatePickerViewArc.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,7 +12,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>84AAB22817BB5EB100A3F547</key>
+		<key>F0E516DC185C771C0079EA4B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F0E516F7185C771D0079EA4B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
