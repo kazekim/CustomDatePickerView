@@ -3,12 +3,8 @@
 
 #define ROW_HEIGHT 34
 
-
-static const int kPickerLabelTag = 2012;
-
 @interface CustomPickerView(PrivateMethods)
 - (void)snap;
--(UIImage *)addText:(UIImage *)img text:(NSString *)text;
 - (UIImage *)imageWithColor:(UIColor *)color forRect:(CGRect) rect;
 
 @end
@@ -142,11 +138,10 @@ itemVerticalOffset:(CGFloat)offset andData:(NSArray*) data
         
         NSString* dataObjectStr = [NSString stringWithFormat:@"%@",[self.data4Rows objectAtIndex:indexPath.row] ];
         
-        UIImage* image = [self addText:[self imageWithColor:[UIColor clearColor]forRect:CGRectMake(0, 0, 100, 30)] text: dataObjectStr];
-        UIImageView* numberImage = [[UIImageView alloc] initWithFrame:CGRectMake(15, 0, 80, ROW_HEIGHT)];
-        numberImage.contentMode = UIViewContentModeCenter;
-        numberImage.image = image;
-        [cell.contentView addSubview:numberImage];
+        UILabel *valueLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, ROW_HEIGHT)];
+        [valueLabel setText:dataObjectStr];
+        [valueLabel setTextAlignment:NSTextAlignmentCenter];
+        [cell.contentView addSubview:valueLabel];
 
     }
     
@@ -249,44 +244,6 @@ itemVerticalOffset:(CGFloat)offset andData:(NSArray*) data
 }
 
 #pragma mark private methods
--(UIImage *)addText:(UIImage *)img text:(NSString *)text
-{
-    /*int w = img.size.width;
-     int h = img.size.height;
-     CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
-     CGContextRef context = CGBitmapContextCreate(NULL, w, h, 8, 4 * w, colorSpace, kCGImageAlphaPremultipliedFirst);
-     CGContextDrawImage(context, CGRectMake(0, 0, w, h), img.CGImage);
-     
-     char* text= (char *)[text1 cStringUsingEncoding:NSUTF8StringEncoding];
-     
-     CGContextSelectFont(context, "Helvetica",16, kCGEncodingMacRoman);
-     CGContextSetTextDrawingMode(context, kCGTextFill);
-     CGContextSetRGBFillColor(context, 0, 0, 0, 1);
-     CGContextShowTextAtPoint(context,10,10,text, strlen(text));
-     CGImageRef imgCombined = CGBitmapContextCreateImage(context);
-     
-     CGContextRelease(context);
-     CGColorSpaceRelease(colorSpace);
-     
-     UIImage *retImage = [UIImage imageWithCGImage:imgCombined];
-     CGImageRelease(imgCombined);
-     
-     return retImage;*/
-    
-    CGPoint point = CGPointMake(10.0f, 3.0f);
-    
-    UIFont *font = [UIFont boldSystemFontOfSize:18];
-    UIGraphicsBeginImageContext(img.size);
-    [img drawInRect:CGRectMake(0,0,img.size.width,img.size.height)];
-    CGRect rect = CGRectMake(point.x, point.y, img.size.width, img.size.height);
-    [[UIColor blackColor] set];
-    [text drawInRect:CGRectIntegral(rect) withFont:font];
-    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    
-    return newImage;
-    
-}
 
 - (UIImage *)imageWithColor:(UIColor *)color forRect:(CGRect) rect
 {
