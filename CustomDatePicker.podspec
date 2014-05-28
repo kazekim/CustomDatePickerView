@@ -3,7 +3,9 @@ Pod::Spec.new do |s|
   s.version      = "1.0.1"
   s.summary      = "Custom Date Picker for ios"
   s.platform     = :ios, '6.0'
-  s.source       = { :git => "https://github.com/kazekim/CustomDatePickerView.git" }
+  s.source       = { :git => "https://github.com/kazekim/CustomDatePickerView.git" ,
+			:tag => s.version.to_s
+		}
   s.description  = <<-DESC
                      Custom Date Picker
                     DESC
