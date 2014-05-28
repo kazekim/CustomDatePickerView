@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-  s.name         = "CustomDatePicker"
+  s.name         = "CustomDatePickerView"
   s.version      = "1.0.0"
   s.summary      = "Custom Date Picker for ios"
   s.platform     = :ios, '6.0'
