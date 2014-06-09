@@ -141,7 +141,7 @@
     }];*/
     for (int i = _minYear; i<=year; i++)
     {
-        [years addObject:[NSString stringWithFormat:@"%d",i]];
+        [years addObject:[NSString stringWithFormat:@"%d",i+543]];
     }
     
     _yearPicker= [[CustomPickerView alloc] initWithFrame:CGRectMake(_dayImage.size.width + _monthImage.size.width-2*TABLE_RECT_OFFSET, 0, _yearImage.size.width, _yearImage.size.height) background:_yearImage itemVerticalOffset:0.0f andData:years];
@@ -149,10 +149,11 @@
     //[_yearPicker setDataIndex:_date.y];
     _yearPicker.delegate = self;
     
-    NSDateFormatter *df = [NSDateFormatter new];
+//    NSDateFormatter *df = [NSDateFormatter new];
     // change locale if the standard is not what you want
     
-    NSArray *monthNames = [df standaloneMonthSymbols];
+    //NSArray *monthNames = [df standaloneMonthSymbols];
+    NSArray *monthNames = [self monthNamesTH];
     _mounthPicker = [[CustomPickerView alloc] initWithFrame:CGRectMake(_dayImage.size.width - TABLE_RECT_OFFSET , 0, _monthImage.size.width, _monthImage.size.height)background:_monthImage itemVerticalOffset:0.0f andData:monthNames];
     _mounthPicker.delegate = self;
     _mounthPicker.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin;
@@ -164,7 +165,7 @@
     NSRange range = [cal rangeOfUnit:NSDayCalendarUnit
                               inUnit:NSMonthCalendarUnit
                              forDate:[cal dateFromComponents:comps]];
-    NSLog(@"%d", range.length);
+//    NSLog(@"%d", range.length);
     
     NSMutableArray* days = [NSMutableArray array];
     
@@ -250,6 +251,14 @@
     self.yearImage = nil;
     self.monthImage = nil;
     self.calendar = nil;
+}
+
+#pragma mark Month Name
+
+-(NSArray *) monthNamesTH
+{
+    return [NSArray arrayWithObjects:@"มกราคม",@"กุมภาพันธ์",@"มีนาคม",@"เมษายน",@"พฤษภาคม",@"มิถุนายน",@"กรกฎาคม",@"สิงหาคม",@"กันยายน",@"ตุลาคม",@"พฤศจิกายน",@"ธันวาคม", nil];
+    
 }
 
 #pragma mark UICustomPickerConrol Delegate
