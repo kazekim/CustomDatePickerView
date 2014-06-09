@@ -256,6 +256,9 @@
     [_mounthPicker setDataIndex:month-1];
     [_dayPicker setDataIndex:[days indexOfObject:[NSString stringWithFormat:@"%d",day]]];
 
+    if(self.delegate){
+        [self.delegate datePickerDateChange:self forDate:date];
+    }
 }
 
 - (void)dealloc
