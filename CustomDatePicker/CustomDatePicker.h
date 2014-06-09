@@ -32,7 +32,7 @@
 @property(nonatomic,assign) id<CustomDatePickerDelegate> delegate;
 
 -(id)initWithImageForDay:(UIImage*)dayImage andMonthImage:(UIImage*)monthImage andYearImage:(UIImage*)yearImage forRect:(CGRect)rect;
-
+- (void)setDefaultDate:(NSDate *)date;
 
 @end
 

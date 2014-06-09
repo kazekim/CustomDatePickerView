@@ -26,6 +26,17 @@
     [super viewDidLoad];
 
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    
+}
+
+-(void)viewDidAppear:(BOOL)animated
+{
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    [dateFormat setDateFormat:@"yyyy-MM-dd"];
+    NSDate* myDate = [dateFormat dateFromString:@"1986-07-06"];
+    
+    [_customPicker setDefaultDate:myDate];
 }
 
 - (void)didReceiveMemoryWarning

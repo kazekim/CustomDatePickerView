@@ -24,6 +24,9 @@
     UIImage* _dayImage;
     UIImage* _monthImage;
     UIImage* _yearImage;
+    
+    NSMutableArray *years;
+    NSMutableArray *days;
 }
 
 @property(strong,retain)UIImage* dayImage;
@@ -130,7 +133,7 @@
     
     NSInteger year = [components year];
     
-    NSMutableArray* years = [NSMutableArray array];
+    years = [NSMutableArray array];
 
     _minYear = [[_calendar components:(NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit) fromDate:_minimumDate] year];
     
@@ -167,7 +170,7 @@
                              forDate:[cal dateFromComponents:comps]];
 //    NSLog(@"%d", range.length);
     
-    NSMutableArray* days = [NSMutableArray array];
+    days = [NSMutableArray array];
     
     for (int i= 1; i<range.length; i++)
     {
@@ -217,7 +220,7 @@
                                   inUnit:NSMonthCalendarUnit
                                  forDate:[cal dateFromComponents:comps]];
         
-        NSMutableArray* days = [NSMutableArray array];
+        days = [NSMutableArray array];
         
         for (int i= 1; i<=range.length; i++)
         {
@@ -228,7 +231,7 @@
 //        NSLog(@"Month %d",month);
         
     }];
-    
+
 }
 /*
 // Only override drawRect: if you perform custom drawing.
@@ -239,6 +242,21 @@
 }
 */
 
+- (void)setDefaultDate:(NSDate *)date
+{
+    
+    // Use in ViewDidAppear
+    NSDateComponents *components = [_calendar components:(NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit) fromDate:date];
+    
+    NSInteger year = [components year];
+    NSInteger month = [components month];
+    NSInteger day = [components day];
+    
+    [_yearPicker setDataIndex:[years indexOfObject:[NSString stringWithFormat:@"%d",year+543]]];
+    [_mounthPicker setDataIndex:month-1];
+    [_dayPicker setDataIndex:[days indexOfObject:[NSString stringWithFormat:@"%d",day]]];
+
+}
 
 - (void)dealloc
 {
