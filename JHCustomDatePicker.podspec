@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-  s.name         = "CustomDatePicker"
+  s.name         = "JHCustomDatePicker"
   s.version      = "1.0.8"
   s.summary      = "Custom Date Picker for ios"
   s.platform     = :ios, '6.0'
@@ -7,7 +7,7 @@ Pod::Spec.new do |s|
 			:tag => s.version.to_s
 		}
   s.description  = <<-DESC
-                     Custom Date Picker
+                     Custom Date Picker for iOS by Jirawat Harnsiriwatanakit
                     DESC
   s.homepage     = "https://github.com/kazekim/CustomDatePickerView"
   s.license      = 'MIT'
