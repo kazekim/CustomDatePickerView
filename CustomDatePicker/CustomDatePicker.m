@@ -142,7 +142,7 @@
         [years addObject:[NSString stringWithFormat:@"%d",idx]];
         *stop = idx>_minYear;
     }];*/
-    for (int i = _minYear; i<=year; i++)
+    for (NSInteger i = _minYear; i<=year; i++)
     {
         [years addObject:[NSString stringWithFormat:@"%d",i+543]];
     }
@@ -248,10 +248,10 @@
     // Use in ViewDidAppear
     NSDateComponents *components = [_calendar components:(NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit) fromDate:date];
     
-    NSInteger year = [components year];
-    NSInteger month = [components month];
-    NSInteger day = [components day];
-    
+    int year = [components year];
+    int month = [components month];
+    int day = [components day];
+
     [_yearPicker setDataIndex:[years indexOfObject:[NSString stringWithFormat:@"%d",year+543]]];
     [_mounthPicker setDataIndex:month-1];
     [_dayPicker setDataIndex:[days indexOfObject:[NSString stringWithFormat:@"%d",day]]];

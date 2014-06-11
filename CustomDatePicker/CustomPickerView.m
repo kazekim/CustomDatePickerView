@@ -76,7 +76,7 @@ itemVerticalOffset:(CGFloat)offset andData:(NSArray*) data
 
 - (void)setDataIndex:(NSUInteger)index
 {
-    int rowsCount = [self.tableView numberOfRowsInSection:0];
+    NSInteger rowsCount = [self.tableView numberOfRowsInSection:0];
     _selectedIndex = index < rowsCount && index > 0 ? index : rowsCount;
     [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:index inSection:0] atScrollPosition:UITableViewScrollPositionMiddle animated:NO];
 }
@@ -126,7 +126,7 @@ itemVerticalOffset:(CGFloat)offset andData:(NSArray*) data
 
 - (UITableViewCell *)tableView:(UITableView *)aTableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSString* cellName = [NSString stringWithFormat:@"%d",indexPath.row];
+    NSString* cellName = [NSString stringWithFormat:@"%d",(int)indexPath.row];
     UITableViewCell *cell = (UITableViewCell *)[aTableView dequeueReusableCellWithIdentifier:cellName];
     
     if (cell == nil)
@@ -197,7 +197,7 @@ itemVerticalOffset:(CGFloat)offset andData:(NSArray*) data
         [self.delegate pickerController:self didSnapToString:self.selectedString];
         if (self.customPickerViewControllerDidSpinCallback)
         {
-            self.customPickerViewControllerDidSpinCallback(self.selectedIndex + 1);
+            self.customPickerViewControllerDidSpinCallback((int)self.selectedIndex + 1);
         }
 
     }
