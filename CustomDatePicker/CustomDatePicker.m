@@ -144,7 +144,7 @@
     }];*/
     for (NSInteger i = _minYear; i<=year; i++)
     {
-        [years addObject:[NSString stringWithFormat:@"%d",i+543]];
+        [years addObject:[NSString stringWithFormat:@"%d",(int)(i+543)]];
     }
     
     _yearPicker= [[CustomPickerView alloc] initWithFrame:CGRectMake(_dayImage.size.width + _monthImage.size.width-2*TABLE_RECT_OFFSET, 0, _yearImage.size.width, _yearImage.size.height) background:_yearImage itemVerticalOffset:0.0f andData:years];
@@ -248,9 +248,9 @@
     // Use in ViewDidAppear
     NSDateComponents *components = [_calendar components:(NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit) fromDate:date];
     
-    int year = [components year];
-    int month = [components month];
-    int day = [components day];
+    int year = (int)[components year];
+    int month = (int)[components month];
+    int day = (int)[components day];
 
     [_yearPicker setDataIndex:[years indexOfObject:[NSString stringWithFormat:@"%d",year+543]]];
     [_mounthPicker setDataIndex:month-1];
