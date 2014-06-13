@@ -51,18 +51,35 @@
     
     if ((self = [super initWithCoder:aDecoder]))
     {
+        self.dayImage = [UIImage imageNamed:@"day"];
+        self.monthImage = [UIImage imageNamed:@"month"];
+        self.yearImage = [UIImage imageNamed:@"year"];
+        
         [self defaultDataInit];
     }
     return self;
 
 }
 
+- (id)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    if (self)
+    {
+        self.dayImage = [UIImage imageNamed:@"day"];
+        self.monthImage = [UIImage imageNamed:@"month"];
+        self.yearImage = [UIImage imageNamed:@"year"];
+        
+        [self defaultDataInit];
+        
+    }
+    return self;
+}
+
+
 -(void) defaultDataInit
 {
     //self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, 250, 50);
-    self.dayImage = [UIImage imageNamed:@"day"];
-    self.monthImage = [UIImage imageNamed:@"month"];
-    self.yearImage = [UIImage imageNamed:@"year"];
     
     _dayPicker = nil;
     _yearPicker = nil;
@@ -98,6 +115,8 @@
     
     if (self)
     {
+        [self defaultDataInit];
+        
         self.dayImage = dayImage;
         self.monthImage = monthImage;
         self.yearImage = yearImage;
@@ -105,17 +124,6 @@
     
     return self;
 }
-- (id)initWithFrame:(CGRect)frame
-{
-    self = [super initWithFrame:frame];
-    if (self)
-    {
-        [self defaultDataInit];
-        
-    }
-    return self;
-}
-
 
 #pragma mark prepare View
 -(void)layoutSubviews

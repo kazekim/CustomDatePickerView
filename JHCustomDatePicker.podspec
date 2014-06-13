@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "JHCustomDatePicker"
-  s.version      = "1.0.10"
+  s.version      = "1.0.12"
   s.summary      = "Custom Date Picker for ios"
   s.platform     = :ios, '6.0'
   s.source       = { :git => "https://github.com/kazekim/CustomDatePickerView.git" ,

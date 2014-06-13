@@ -186,10 +186,7 @@ itemVerticalOffset:(CGFloat)offset andData:(NSArray*) data
     self.isSpinning = NO;
     isAnimating = NO;
     [self snap];
-}
-
-- (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView
-{
+    
     if (isAnimating)
     {
         isAnimating = NO;
@@ -199,10 +196,15 @@ itemVerticalOffset:(CGFloat)offset andData:(NSArray*) data
         {
             self.customPickerViewControllerDidSpinCallback((int)self.selectedIndex + 1);
         }
-
+        
     }
     else
         [self snap];
+}
+
+- (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView
+{
+    
 }
 
 - (void)snap
